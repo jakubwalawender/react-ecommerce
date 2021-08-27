@@ -10,25 +10,30 @@ class Directory extends React.Component {
             sections: [{
                 title: 'hats',
                 imageUrl: 'https://images.pexels.com/photos/704857/pexels-photo-704857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                id: 1
+                id: 1,
+                linkUrl: 'hats'
             }, {
                 title: 'jackets',
                 imageUrl: 'https://images.pexels.com/photos/6044261/pexels-photo-6044261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                id: 2
+                id: 2,
+                linkUrl: 'hats'
             }, {
                 title: 'sneakers',
                 imageUrl: 'https://images.pexels.com/photos/5088874/pexels-photo-5088874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                id: 3
+                id: 3,
+                linkUrl: 'hats'
             }, {
                 title: 'womens',
                 imageUrl: 'https://images.pexels.com/photos/6836005/pexels-photo-6836005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                 id: 4,
                 size: 'large',
+                linkUrl: 'hats'
             }, {
                 title: 'mens',
                 imageUrl: 'https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
                 id: 5,
                 size: 'large',
+                linkUrl: 'hats'
             }]
         }
 
@@ -38,8 +43,8 @@ class Directory extends React.Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(({title, imageUrl, id, size}) => (
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+                    this.state.sections.map(({id, ...sectionProps}) => (
+                        <MenuItem key={id} {...sectionProps}/>
                     ))
                 }
             </div>
