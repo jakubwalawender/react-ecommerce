@@ -1,4 +1,10 @@
 body {
-    font-family: Bebas Neue, serif;
+    font-family: Karantina, serif;
+    font-size: 1.2em;
     padding: 20px 60px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
